@@ -1,67 +1,105 @@
-# Personalized News Platform
+# Personalized News Aggregator
 
-An AI-powered news and learning platform that delivers personalized content curated by Gemini AI. The platform helps users stay informed while avoiding information overload through smart curation, summarization, and interactive learning features.
+[![Frontend Deployment](https://img.shields.io/badge/Vercel-Frontend-black?style=for-the-badge&logo=vercel)](https://name-personalized-news-frontend.vercel.app/)
+[![Backend Deployment](https://img.shields.io/badge/Render-Backend-46E3B7?style=for-the-badge&logo=render)](https://personalized-news-backend-ucdr.onrender.com)
 
-## Features
+A sophisticated full-stack news aggregation platform that delivers a tailored news experience to users. The application features a React-based frontend, a robust Node.js/Express backend, and leverages a Gemini-powered AI assistant to provide intelligent summaries and insights.
 
-- 🎯 Personalized news feed based on user interests and goals
-- 🤖 AI-powered content curation and summarization
-- 💡 Interactive Q&A with Gemini AI
-- 📊 Learning progress tracking and analytics
-- 👥 Community features and discussion boards
-- 📱 Mobile-first, responsive design
+## Live Demo
 
-## Tech Stack
+*   **Frontend (Vercel):** [https://name-personalized-news-frontend.vercel.app/](https://name-personalized-news-frontend.vercel.app/)
+*   **Backend (Render):** [https://personalized-news-backend-ucdr.onrender.com](https://personalized-news-backend-ucdr.onrender.com)
 
-- Frontend: React, Tailwind CSS, Axios
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- AI: Google Gemini AI
-- Authentication: JWT
+## Key Features
 
-## Prerequisites
+*   **Personalized Feed:** Users receive a news feed based on their preferred categories and sources.
+*   **AI-Powered Assistant:** An integrated Gemini AI chatbot can summarize articles and answer user questions.
+*   **User Authentication:** Secure user registration and login system using JWT for protected routes.
+*   **Article Management:** Features for bookmarking articles and tracking reading history.
+*   **Responsive Design:** A modern and clean UI built with Tailwind CSS that works seamlessly across all devices.
+*   **Performance Optimized:** Implements code splitting, lazy loading, and skeleton loaders for a fast and smooth user experience.
+*   **Error Handling:** Robust error boundaries in the frontend to prevent UI crashes.
 
-- Node.js (v14 or higher)
-- MongoDB
-- Google Cloud account with Gemini AI API access
+## Technologies & Tools
 
-## Setup Instructions
+**Frontend:**
+*   React.js
+*   Tailwind CSS
+*   React Router
+*   Axios
+*   i18next (for internationalization)
 
-1. Clone the repository:
+**Backend:**
+*   Node.js
+*   Express.js
+*   MongoDB (with Mongoose)
+*   JSON Web Tokens (JWT)
+*   Google Gemini API
+
+**DevOps & Deployment:**
+*   Vercel (Frontend)
+*   Render (Backend)
+*   Git & GitHub
+
+## Local Development Setup
+
+To run this project on your local machine, follow the steps below.
+
+### Prerequisites
+
+*   Node.js (v14 or later)
+*   npm
+*   MongoDB instance (local or a cloud service like MongoDB Atlas)
+*   Git
+
+### 1. Clone the Repository
+
 ```bash
-git clone https://github.com/yourusername/personalized-news.git
-cd personalized-news
+git clone https://github.com/singh-manis/---Name-personalized-news-backend-.git
+cd ---Name-personalized-news-backend-
 ```
 
-2. Install dependencies:
+### 2. Backend Setup
+
 ```bash
-npm run install-all
+cd backend
+npm install
 ```
 
-3. Set up environment variables:
-   - Create `.env` files in both frontend and backend directories
-   - Add necessary API keys and configuration
+Create a `.env` file in the `backend` directory and add the necessary environment variables (see below).
 
-4. Start the development servers:
 ```bash
+# Start the backend server
 npm start
 ```
 
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:5000
+### 3. Frontend Setup
+
+In a new terminal:
+```bash
+cd frontend
+npm install
+```
+
+Create a `.env` file in the `frontend` directory and add the necessary environment variables (see below).
+
+```bash
+# Start the frontend development server
+npm start
+```
 
 ## Environment Variables
 
-### Backend (.env)
+To run this project, you will need to add the following environment variables to your `.env` files. You can use the `env.example` file as a guide.
+
+#### Backend (`/backend/.env`)
 ```
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-GEMINI_API_KEY=your_gemini_api_key
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_super_secret_jwt_key
 PORT=5000
 ```
 
-### Frontend (.env)
+#### Frontend (`/frontend/.env`)
 ```
 REACT_APP_API_URL=http://localhost:5000
 REACT_APP_GEMINI_API_KEY=your_gemini_api_key
