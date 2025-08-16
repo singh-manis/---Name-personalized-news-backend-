@@ -26,6 +26,21 @@ mongoose.connect(process.env.MONGODB_URI, {
 .then(() => console.log('Connected to MongoDB'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Personalized News API is running!',
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth',
+      news: '/api/news',
+      user: '/api/user',
+      ai: '/api/ai'
+    },
+    status: 'active'
+  });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/news', newsRoutes);
